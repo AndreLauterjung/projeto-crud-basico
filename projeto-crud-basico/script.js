@@ -23,7 +23,7 @@ function mostrarTarefas(){
 
         listaTarefasSalvas += `<li><p>Tarefa: ${task}
         <button type="button" onclick="botaoEditarTarefa(${index})">Editar Tarefa ${numeroTarefa}</button>
-        <button type="button" >Deletar Tarefa ${numeroTarefa}</button></p></li>`
+        <button type="button" onclick="deletarTarefa(${index})">Deletar Tarefa ${numeroTarefa}</button></p></li>`
     })
 
     document.getElementById("tagListaOrdenada").innerHTML = listaTarefasSalvas;
@@ -48,4 +48,11 @@ function editarTarefa(index)
     mostrarTarefas();
 
     document.getElementById("divEditarTarefa").innerHTML = `<p></p>`
+}
+
+function deletarTarefa(index)
+{
+    tarefas.splice(index, 1);
+
+    mostrarTarefas();
 }

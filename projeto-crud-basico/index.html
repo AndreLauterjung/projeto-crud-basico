@@ -20,28 +20,56 @@
             Você pode adicionar, editar e remover tarefas da lista.
         </p>
     </div>
+    <hr>
+    <hr>
+    <br>
 
     <div id="entradaDados">
         <label>Digite a tarefa: 
             <input id="InputNomeTarefa" type="text">
         </label>
 
-        <button type="button" onclick="salvarTarefa()">Salvar tarefa</button>
-    </div>
-    <br>
-
-    <div id="divEditarTarefa">
+        <button type="button" onclick="salvarTarefa()">Salvar</button>
         
     </div>
 
-    
+    <!-- Bloco onde aparecerá input de edição de tarefa -->
+    <br>
+
+    <div id="divEditarTarefaUrgente"></div>
+    <div id="divEditarTarefaComum"></div>
+
+
+    <br>
+    <hr>
+    <hr>
+    <div>
+    <!-- Bloco para tarefas urgentes -->
+        <div id="divTarefaUrgente">
+            <p><b>TAREFAS URGENTES: </b></p>
+
+            <ol id="tagListaTarefasUrgentes">
+
+            </ol>
+        </div>
+    </div> <!---->
+
+    <hr>
+    <hr>
+
+    <!-- Bloco para tarefas com menos urgência -->
     <div id="divListaTarefas">
-        <ol id="tagListaOrdenada">
+        <p>TAREFAS COMUNS: </p>
+        <ol id="tagListaTarefasComuns">
 
         </ol>
     </div>
 
-    <script src="script.js"></script>
+    <hr>
+    <hr>
+
+    <script src="tarefasComuns.js"></script>
+    <script src="tarefasUrgentes.js"></script>
 </body>
 
 </html>

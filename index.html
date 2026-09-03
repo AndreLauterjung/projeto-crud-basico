@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="André Lauterjung">
+    <meta name="description" content="Lista de tarefas simples para testar comandos CRUD.">
+
+    <title>Lista de tarefas</title>
+</head>
+
+<body>
+    <div id="divTitulo">
+        <h1>Lista de Tarefas Básica</h1>    
+    </div>
+
+    <div id="divTextoInicio">
+        <p>Nesta lista, você pode adicionar, editar ou remover atividades
+            e também pode organizar por importância, tarefas que
+            precisam ser concluídas mais rápido, por exemplo.
+        </p>
+    </div>
+
+    <hr><hr><br>
+
+    <!-- Bloco com entrada de dados principal -->
+    <div id="entradaDados">
+        <label>Digite a tarefa: 
+            <input id="InputNomeTarefa" type="text">
+        </label>
+
+        <button type="button" onclick="salvarTarefa()">Salvar</button> 
+    </div>
+    <br>
+
+
+    <!-- Bloco onde aparecerá input de edição de tarefa -->
+    <div id="divEditarTarefaUrgente"></div>
+    <div id="divEditarTarefaComum"></div>
+
+    <br><hr><hr>
+    
+    <!-- Bloco para tarefas urgentes -->
+    <div id="divTarefaUrgente">
+        <p><b>TAREFAS URGENTES: </b></p>
+
+        <ol id="tagListaTarefasUrgentes"> </ol>
+    </div>
+    
+    <hr><hr>
+
+    <!-- Bloco para tarefas com menos urgência -->
+    <div id="divListaTarefas">
+        <p>TAREFAS COMUNS: </p>
+        <ol id="tagListaTarefasComuns"></ol>
+    </div>
+
+    <hr><hr>
+
+    <script src="tarefasComuns.js"></script>
+    <script src="tarefasUrgentes.js"></script>
+</body>
+
+</html>

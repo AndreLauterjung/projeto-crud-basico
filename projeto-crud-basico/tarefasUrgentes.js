@@ -57,7 +57,7 @@ function moverParaTarefaComum(index)
     listaTarefasUrgentes.splice(index, 1);
 
     // Adiciona a tarefa no array de tarefas urgentes.
-    tarefas.push(tarefaUrgenteRetirada);
+    listaTarefasComuns.push(tarefaUrgenteRetirada);
 
     // Mostra as listas atualizadas.
     mostrarTarefasUrgentes();

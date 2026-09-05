@@ -12,61 +12,51 @@
 
 <body>
     <div id="divTitulo">
-        <h1>Lista de tarefas básica</h1>    
+        <h1>Lista de Tarefas Básica</h1>    
     </div>
 
     <div id="divTextoInicio">
-        <p>Adicione suas tarefas abaixo.<br>
-            Você pode adicionar, editar e remover tarefas da lista.
+        <p>Nesta lista, você pode adicionar, editar ou remover atividades
+            e também pode organizar por importância, tarefas que
+            precisam ser concluídas mais rápido, por exemplo.
         </p>
     </div>
-    <hr>
-    <hr>
-    <br>
 
+    <hr><hr><br>
+
+    <!-- Bloco com entrada de dados principal -->
     <div id="entradaDados">
         <label>Digite a tarefa: 
             <input id="InputNomeTarefa" type="text">
         </label>
 
-        <button type="button" onclick="salvarTarefa()">Salvar</button>
-        
+        <button type="button" onclick="salvarTarefa()">Salvar</button> 
     </div>
-
-    <!-- Bloco onde aparecerá input de edição de tarefa -->
     <br>
 
+
+    <!-- Bloco onde aparecerá input de edição de tarefa -->
     <div id="divEditarTarefaUrgente"></div>
     <div id="divEditarTarefaComum"></div>
 
-
-    <br>
-    <hr>
-    <hr>
-    <div>
+    <br><hr><hr>
+    
     <!-- Bloco para tarefas urgentes -->
-        <div id="divTarefaUrgente">
-            <p><b>TAREFAS URGENTES: </b></p>
+    <div id="divTarefaUrgente">
+        <p><b>TAREFAS URGENTES: </b></p>
 
-            <ol id="tagListaTarefasUrgentes">
-
-            </ol>
-        </div>
-    </div> <!---->
-
-    <hr>
-    <hr>
+        <ol id="tagListaTarefasUrgentes"> </ol>
+    </div>
+    
+    <hr><hr>
 
     <!-- Bloco para tarefas com menos urgência -->
     <div id="divListaTarefas">
         <p>TAREFAS COMUNS: </p>
-        <ol id="tagListaTarefasComuns">
-
-        </ol>
+        <ol id="tagListaTarefasComuns"></ol>
     </div>
 
-    <hr>
-    <hr>
+    <hr><hr>
 
     <script src="tarefasComuns.js"></script>
     <script src="tarefasUrgentes.js"></script>

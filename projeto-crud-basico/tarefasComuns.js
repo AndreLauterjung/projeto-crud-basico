@@ -1,9 +1,9 @@
-let tarefas = [];
+let listaTarefasComuns = [];
 
 // Função para salvar tarefa (inserir no array de tarefas).
 function salvarTarefa()
 {
-    tarefas.push(document.getElementById("InputNomeTarefa").value);
+    listaTarefasComuns.push(document.getElementById("InputNomeTarefa").value);
     mostrarTarefasComuns();
 }
 
@@ -11,7 +11,7 @@ function salvarTarefa()
 function mostrarTarefasComuns(){
 
     let listaTarefasSalvas = "";
-    tarefas.forEach((task, index) => {
+    listaTarefasComuns.forEach((task, index) => {
 
         listaTarefasSalvas += `<li><p>Tarefa: ${task}<br>
         <button type="button" onclick="botaoEditarTarefaComum(${index})"> Editar Tarefa </button>
@@ -37,7 +37,7 @@ function editarTarefaComum(index)
 {
     let novaTarefaComum = document.getElementById("InputNovoNomeTarefa").value;
 
-    tarefas[index] = novaTarefaComum;
+    listaTarefasComuns[index] = novaTarefaComum;
     mostrarTarefasComuns();
 
     document.getElementById("divEditarTarefaComum").innerHTML = `<p></p>`
@@ -46,7 +46,7 @@ function editarTarefaComum(index)
 // Função para deletar tarefas comuns.
 function deletarTarefaComum(index)
 {
-    tarefas.splice(index, 1);
+    listaTarefasComuns.splice(index, 1);
     mostrarTarefasComuns();
 }
 
@@ -57,7 +57,7 @@ function moverTarefaParaUrgente(index)
     tarefaComumRetirada = tarefas[index];
 
     // Remove do array de tarefas comuns.
-    tarefas.splice(index, 1);
+    listaTarefasComuns.splice(index, 1);
 
     // Adiciona a tarefa no array de tarefas urgentes.
     listaTarefasUrgentes.push(tarefaComumRetirada);
